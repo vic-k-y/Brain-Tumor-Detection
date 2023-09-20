@@ -5,6 +5,8 @@ import numpy as np
 
 cnnmodel = keras.models.load_model("cnnmodel2")
 
+classes = ['glioma_tumor', 'meningioma_tumor', 'no_tumor', 'pituitary_tumor']
+
 def to_predict(img):
   imac = tf.image.resize(img, (256, 256))
   #imac = tf.image.encode_jpeg(tf.image.resize(img, (256, 256)))
