@@ -6,8 +6,10 @@ import numpy as np
 cnnmodel = keras.models.load_model("cnnmodel2")
 
 def to_predict(img):
-  #img_array = tf.keras.preprocessing.image.img_to_array(img)
-  img_array = tf.keras.utils.img_to_array(img)
+  imac = tf.image.resize(img, (256, 256))
+  #imac = tf.image.encode_jpeg(tf.image.resize(img, (256, 256)))
+  img_array = tf.keras.preprocessing.image.img_to_array(imac)
+  #img_array = tf.keras.utils.img_to_array(img)
   img_array = tf.expand_dims(img_array, 0)
   predictions = cnnmodel.predict(img_array)
   conf= {}
