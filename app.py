@@ -1,7 +1,7 @@
 import tensorflow as tf
 from tensorflow import keras
 import numpy as np
-from tensorflow.keras import models,layers
+
 
 cnnmodel = keras.models.load_model("cnnmodel2")
 
@@ -20,8 +20,8 @@ import gradio as gr
 
 iface=gr.Interface(fn=to_predict,
              inputs=gr.Image(),
-             outputs=gr.Label(num_top_classes=3),
-             examples=["images/image(9).jpg","images/image.jpg","images/p (1).jpg","images/gg (1).jpg"])
+             outputs=gr.Label(num_top_classes=3))#,
+             #examples=["images/image(9).jpg","images/image.jpg","images/p (1).jpg","images/gg (1).jpg"])
 
 iface.launch()
     
