@@ -1,13 +1,3 @@
----
-title: Brain Tumor
-emoji: ⚡
-colorFrom: gray
-colorTo: blue
-sdk: gradio
-sdk_version: 3.44.4
-app_file: app.py
-pinned: false
-license: creativeml-openrail-m
----
-
-Check out the configuration reference at https://huggingface.co/docs/hub/spaces-config-reference
+Brain Tumor Classification of MRI scanned Images using CNN.<br />
+Try here: https://vickyji-brain-tumor.hf.space<br />
+More info on -> [vigneshporf](https://vigneshportfolio.live/Brain%20tumor%20classification.html)https://vigneshportfolio.live/Brain%20tumor%20classification.html
